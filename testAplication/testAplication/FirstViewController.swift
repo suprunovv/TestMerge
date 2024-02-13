@@ -7,9 +7,12 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+/// Стартовый экран
+final class FirstViewController: UIViewController {
     
-    let button: UIButton = {
+    // MARK: - Private Properties
+    
+    private let button: UIButton = {
         let button = UIButton(frame: CGRect(x: 100, y: 300, width: 100, height: 100))
         button.setTitle("secondVC", for: .normal)
         button.backgroundColor = .blue
@@ -17,15 +20,24 @@ class FirstViewController: UIViewController {
         button.addTarget(self, action: #selector(goToSecVC), for: .touchUpInside)
         return button
     }()
-
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func configure() {
         view.addSubview(button)
         view.backgroundColor = .green
     }
-                         
-    @objc func goToSecVC() {
+    
+    @objc private func goToSecVC() {
         let secondVC = SecondVC()
         present(secondVC, animated: true, completion: nil)
     }
+
 }
