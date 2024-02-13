@@ -13,7 +13,7 @@ final class SecondVC: UIViewController {
     var name: String?
     var lastName: String?
     var surname: String?
-    
+     
     // MARK: - Visual Components
     
     private lazy var helloLabel: UILabel = {
