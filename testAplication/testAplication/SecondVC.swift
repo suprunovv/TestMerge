@@ -23,8 +23,8 @@ final class SecondVC: UIViewController {
     }()
     
     private lazy var nameLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        label.text = self.name ?? "Text"
+        let label = UILabel(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
+        label.text = "Some text"
         return label
     }()
     
