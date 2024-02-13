@@ -23,8 +23,9 @@ final class SecondVC: UIViewController {
     }()
     
     private lazy var nameLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        let label = UILabel(frame: CGRect(x: 300, y: 127, width: 200, height: 40))
         label.text = self.name ?? "Text"
+        label.backgroundColor = .gray
         return label
     }()
     
