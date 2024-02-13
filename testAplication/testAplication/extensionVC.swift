@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func printTitle() {
-        print(title)
+    func helloFunc() -> String {
+        "Приветствую на экране \(self.title ?? "")"
     }
 }

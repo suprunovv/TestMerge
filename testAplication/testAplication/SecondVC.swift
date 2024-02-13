@@ -10,23 +10,35 @@ import UIKit
 /// Второй вью контроллер
 final class SecondVC: UIViewController {
     
+    var name: String?
+    var lastName: String?
+    var surname: String?
+    
     // MARK: - Visual Components
     
-    private lazy var firstLabel: UILabel = {
+    private lazy var helloLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 100, y: 50, width: 100, height: 50))
+        label.text = helloFunc()
+        return label
+    }()
+    
+    private lazy var nameLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         label.text = self.name ?? "Text"
         return label
     }()
     
-    private lazy var secondLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 200, y: 400, width: 100, height: 50))
-        label.text = "Another text"
+    private lazy var lastnameLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 100, y: 200, width: 100, height: 50))
+        label.text = lastName ?? "Error"
         return label
     }()
     
-    // MARK: - Public Properties
-    
-    var name: String?
+    private lazy var surnameLabel: UILabel = {
+        let label = UILabel(frame: CGRect(x: 100, y: 300, width: 100, height: 50))
+        label.text = surname ?? "Error"
+        return label
+    }()
     
     // MARK: - Life Cycle
     
@@ -38,8 +50,10 @@ final class SecondVC: UIViewController {
     // MARK: - Private Methods
     
     private func configure() {
-        view.backgroundColor = .blue
-        view.addSubview(firstLabel)
-        view.addSubview(secondLabel)
+        view.backgroundColor = .systemGray6
+        view.addSubview(nameLabel)
+        view.addSubview(lastnameLabel)
+        view.addSubview(surnameLabel)
+        view.addSubview(helloLabel)
     }
 }
