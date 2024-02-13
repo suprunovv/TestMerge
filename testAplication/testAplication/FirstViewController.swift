@@ -26,6 +26,9 @@ class FirstViewController: UIViewController {
                          
     @objc func goToSecVC() {
         let secondVC = SecondVC()
+        secondVC.name = "Anton"
+        secondVC.surname = "Alexandrovich"
+        secondVC.lastName = "Suprunov"
         present(secondVC, animated: true, completion: nil)
     }
 }
