@@ -13,7 +13,7 @@ final class SecondVC: UIViewController {
     var name: String?
     var lastName: String?
     var surname: String?
-    
+     
     // MARK: - Visual Components
     
     private lazy var helloLabel: UILabel = {
@@ -23,8 +23,9 @@ final class SecondVC: UIViewController {
     }()
     
     private lazy var nameLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 200, y: 200, width: 100, height: 100))
-        label.text = "Some text"
+        let label = UILabel(frame: CGRect(x: 300, y: 127, width: 200, height: 40))
+        label.text = self.name ?? "Text"
+        label.backgroundColor = .gray
         return label
     }()
     
