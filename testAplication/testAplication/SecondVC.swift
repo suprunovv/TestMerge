@@ -7,9 +7,10 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+/// Второй вью контроллер
+final class SecondVC: UIViewController {
     
-    var name: String?
+    // MARK: - Visual Components
     
     private lazy var firstLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
@@ -22,12 +23,23 @@ class SecondVC: UIViewController {
         label.text = "Another text"
         return label
     }()
-
+    
+    // MARK: - Public Properties
+    
+    var name: String?
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func configure() {
         view.backgroundColor = .blue
         view.addSubview(firstLabel)
         view.addSubview(secondLabel)
     }
 }
-
