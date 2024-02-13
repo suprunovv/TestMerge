@@ -7,11 +7,14 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+/// Второй вью контроллер
+final class SecondVC: UIViewController {
     
     var name: String?
     var lastName: String?
     var surname: String?
+    
+    // MARK: - Visual Components
     
     private lazy var helloLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 100, y: 50, width: 100, height: 50))
@@ -37,8 +40,16 @@ class SecondVC: UIViewController {
         return label
     }()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func configure() {
         view.backgroundColor = .systemGray6
         view.addSubview(nameLabel)
         view.addSubview(lastnameLabel)
@@ -46,4 +57,3 @@ class SecondVC: UIViewController {
         view.addSubview(helloLabel)
     }
 }
-
